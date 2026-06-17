@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Offerte aanvragen — STYNS.IT</title>
+
+  <meta name="description"
+        content="Vraag een offerte aan bij STYNS.IT voor automation, networking, servers en IT-infrastructuur." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Offerte styles moved to css/style.css -->
+</head>
+
+<body class="page-offerte">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <img src="images/styns_white.png" alt="STYNS.IT logo" class="logo">
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#diensten">Diensten</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= OFFERTAANVRAAG ================= -->
+<main class="offerte-wrapper">
+
+  <h1>Offerte aanvragen</h1>
+  <p class="offerte-subtitle">
+    Vul het formulier zo volledig mogelijk in. Zo kunnen we je aanvraag snel en correct behandelen.
+  </p>
+
+  <!-- ⚠️ FORM INHOUD = 100% ONGEWIJZIGD -->
+  <form method="POST" action="https://hook.eu2.make.com/0b8hldolbdjwkuovet3kbu8blt47l9sx">
+    <input type="hidden" name="bron" value="offerte-aanvraag" />
+    <input type="hidden" name="bedrijf" value="Styns IT & Networking" />
+
+    <fieldset>
+      <legend>Contactgegevens</legend>
+      <div class="grid two">
+        <div>
+          <label>Voornaam *</label>
+          <input name="voornaam" type="text" required>
+        </div>
+        <div>
+          <label>Achternaam *</label>
+          <input name="achternaam" type="text" required>
+        </div>
+        <div>
+          <label>E-mailadres *</label>
+          <input name="email" type="email" required>
+        </div>
+        <div>
+          <label>Telefoonnummer *</label>
+          <input name="telefoon" type="tel" required>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Adres</legend>
+      <div class="grid">
+        <input name="straat" type="text" placeholder="Straat + huisnummer">
+        <div class="grid three">
+          <input name="postcode" type="text" placeholder="Postcode">
+          <input name="stad" type="text" placeholder="Stad">
+          <select name="land">
+            <option>België</option>
+            <option>Nederland</option>
+            <option>Luxemburg</option>
+            <option>Frankrijk</option>
+            <option>Duitsland</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Diensten</legend>
+      <div class="checks">
+        <label class="check"><input type="checkbox" name="diensten[]" value="Webdesign"> Webdesign</label>
+        <label class="check"><input type="checkbox" name="diensten[]" value="Networking"> Networking</label>
+        <label class="check"><input type="checkbox" name="diensten[]" value="Automatisering"> (AI) Automatisering</label>
+        <label class="check"><input type="checkbox" name="diensten[]" value="Servers"> Servers & Cloud</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Projectinformatie</legend>
+      <textarea name="beschrijving" required placeholder="Beschrijf je project of vraag"></textarea>
+      <div class="grid two">
+        <input name="timing" type="text" placeholder="Timing">
+        <input name="budget" type="text" placeholder="Budgetindicatie">
+      </div>
+      <textarea name="opmerkingen" placeholder="Extra opmerkingen"></textarea>
+    </fieldset>
+
+    <div class="actions">
+      <p class="legal">
+        Door dit formulier te verzenden ga je akkoord met de verwerking van je gegevens
+        voor het behandelen van deze offerte-aanvraag.
+      </p>
+      <button type="submit" class="btn-submit">Aanvraag verzenden</button>
+    </div>
+  </form>
+
+  <div class="offerte-footer">
+    © 2026 STYNS.IT — Automation, Networking & IT Infrastructure
+  </div>
+
+</main>
+
+</body>
+</html>

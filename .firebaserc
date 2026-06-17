@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "styns-c5319",
+    "production": "styns-it"
+  },
+  "targets": {},
+  "etags": {}
+}

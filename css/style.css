@@ -1,0 +1,386 @@
+/* ================= VARIABLES ================= */
+:root {
+  --red: #E61E24;
+  --black: #0B0B0C;
+  --dark: #121316;
+  --gray: #AEB3B8;
+  --white: #FFFFFF;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* ================= GLOBAL ================= */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  border-bottom: 1px solid #1f1f1f;
+  background-color: rgba(11,11,12,0.85);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  height: 34px;
+}
+
+.icon {
+  height: 24px;
+  width: auto;
+  max-width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: contain;
+}
+
+.main-nav a {
+  margin-left: 24px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.main-nav a:hover {
+  color: var(--white);
+}
+
+.nav-cta {
+  color: var(--red);
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 120px 0;
+  position: relative;
+  background-image: url("../images/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(16,16,16,0.68); /* donkerdere grijze overlay voor betere leesbaarheid */
+  backdrop-filter: blur(4px); /* subtiele wazigheid achter overlay */
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.hero .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  max-width: 720px;
+}
+
+.hero h1 span {
+  color: var(--red);
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  max-width: 600px;
+  color: var(--gray);
+}
+
+.hero-actions {
+  margin-top: 40px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  font-weight: 600;
+  border: 1px solid var(--gray);
+  margin-right: 12px;
+}
+
+.btn.primary {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+}
+
+.btn.secondary {
+  color: var(--gray);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  padding: 100px 0;
+  background-color: var(--dark);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  border: 1px solid #1f1f1f;
+  padding: 28px;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.contact p {
+  margin: 20px 0 40px;
+  color: var(--gray);
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  border-top: 1px solid #1f1f1f;
+  padding: 30px 0;
+  text-align: center;
+  color: var(--gray);
+}
+
+/* ================= PAGE-SPECIFIC: Offerte pages (scoped) ================= */
+body.page-offerte {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #d6e0ee;
+  --brand: #0b3d91;
+  --brand-2: #0a2f6e;
+  --focus: rgba(11, 61, 145, 0.18);
+  --shadow: 0 12px 28px rgba(2, 6, 23, 0.10);
+  --radius: 14px;
+}
+
+body.page-offerte {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 500px at 20% 0%, rgba(11, 61, 145, 0.10), transparent 60%),
+              radial-gradient(900px 400px at 95% 10%, rgba(2, 132, 199, 0.10), transparent 60%),
+              var(--bg);
+  line-height: 1.5;
+}
+
+body.page-offerte .wrap{
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 18px 48px;
+}
+
+/* Backwards compatibility for existing offerte markup */
+body.page-offerte .offerte-wrapper{
+  max-width:860px;
+  margin:120px auto 80px;
+  background:#ffffff;
+  border-radius:14px;
+  padding:32px;
+  box-shadow:0 12px 28px rgba(2,6,23,.10);
+}
+
+body.page-offerte .offerte-wrapper h1{ margin-top:0; font-size:28px; letter-spacing:-0.02em; }
+body.page-offerte .offerte-subtitle{ color:#475569; margin-bottom:24px; }
+body.page-offerte .btn-submit{ background:#0b3d91; color:#fff; border:none; border-radius:12px; padding:12px 18px; font-weight:700; cursor:pointer; font-size:14px; }
+body.page-offerte .btn-submit:hover{ background:#0a2f6e; }
+body.page-offerte .offerte-footer{ text-align:center; font-size:12px; color:#475569; margin-top:32px; }
+
+
+body.page-offerte header{ text-align: center; padding: 12px 0 20px; }
+
+body.page-offerte .brand{ display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid rgba(214, 224, 238, 0.9); border-radius: 999px; background: rgba(255,255,255,0.75); backdrop-filter: blur(8px); }
+
+body.page-offerte .badge{ width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), #1d4ed8); box-shadow: 0 10px 18px rgba(11, 61, 145, 0.25); position: relative; flex: 0 0 auto; }
+
+body.page-offerte h1{ margin: 14px 0 6px; font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -0.02em; }
+body.page-offerte .subtitle{ margin: 0; color: var(--muted); font-size: 15px; }
+
+body.page-offerte .card{ background: var(--card); border: 1px solid rgba(214, 224, 238, 0.95); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+body.page-offerte .card-top{ padding: 18px 18px 0; }
+body.page-offerte .info{ margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+
+body.page-offerte form{ padding: 18px; }
+
+body.page-offerte fieldset{ border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 0 0 14px; background: linear-gradient(180deg, rgba(11,61,145,0.03), transparent 55%); }
+body.page-offerte legend{ padding: 0 10px; font-weight: 650; color: var(--brand-2); }
+
+body.page-offerte .grid{ display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 720px){ body.page-offerte .grid.two{ grid-template-columns: 1fr 1fr; } body.page-offerte .grid.three{ grid-template-columns: 2fr 1fr 1fr; } }
+
+body.page-offerte label{ display: block; font-size: 13px; color: var(--muted); margin: 0 0 6px; }
+body.page-offerte .req{ color: #b91c1c; font-weight: 700; margin-left: 4px; }
+
+body.page-offerte input[type="text"],
+body.page-offerte input[type="email"],
+body.page-offerte input[type="tel"],
+body.page-offerte input[type="number"],
+body.page-offerte select,
+body.page-offerte textarea{
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 11px 12px;
+  outline: none;
+  transition: box-shadow 120ms ease, border-color 120ms ease;
+  font-size: 14px;
+}
+
+body.page-offerte textarea{ min-height: 130px; resize: vertical; }
+
+body.page-offerte input:focus, body.page-offerte select:focus, body.page-offerte textarea:focus{ border-color: rgba(11, 61, 145, 0.65); box-shadow: 0 0 0 4px var(--focus); }
+
+body.page-offerte .checks{ display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 6px; }
+@media (min-width: 720px){ body.page-offerte .checks{ grid-template-columns: 1fr 1fr; } }
+
+body.page-offerte .check{ display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.75); }
+body.page-offerte .check input{ margin-top: 3px; width: 18px; height: 18px; }
+body.page-offerte .check .txt{ margin: 0; font-size: 14px; color: var(--ink); line-height: 1.35; }
+
+body.page-offerte .hint{ margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+
+body.page-offerte .actions{ display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; padding-top: 16px; border-top: 1px solid rgba(214, 224, 238, 0.9); }
+
+body.page-offerte .btn{ appearance: none; border: 0; border-radius: 12px; padding: 12px 16px; background: linear-gradient(135deg, var(--brand), #1d4ed8); color: #fff; font-weight: 700; font-size: 14px; cursor: pointer; box-shadow: 0 10px 18px rgba(11, 61, 145, 0.18); transition: transform 120ms ease, box-shadow 120ms ease; }
+body.page-offerte .btn:hover{ transform: translateY(-1px); box-shadow: 0 14px 24px rgba(11, 61, 145, 0.22); }
+body.page-offerte .btn:active{ transform: translateY(0px); box-shadow: 0 10px 18px rgba(11, 61, 145, 0.18); }
+
+body.page-offerte .legal{ margin: 0; font-size: 12px; color: var(--muted); max-width: 520px; }
+body.page-offerte .footer{ text-align: center; padding: 14px 18px 18px; color: var(--muted); font-size: 12px; border-top: 1px solid rgba(214, 224, 238, 0.95); background: rgba(244, 247, 251, 0.55); }
+body.page-offerte .footer a{ color: var(--brand); text-decoration: none; }
+body.page-offerte .footer a:hover{ text-decoration: underline; }
+body.page-offerte .sr-only{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ================= PAGE-SPECIFIC: Formulier page (scoped) ================= */
+body.page-formulier {
+  --bg:#ffffff;
+  --panel:#f6f7f8;
+  --muted:#6b7280;
+  --accent:#0b6cff;
+  --danger:#d32f2f;
+  --radius:10px;
+  --max-width:920px;
+}
+
+body.page-formulier, body.page-formulier *{ box-sizing: border-box; }
+body.page-formulier html, body.page-formulier body{ height:100%; }
+body.page-formulier body{ margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#fbfdff 0%, #f8fafc 100%); color:#111827; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; padding:24px; display:flex; align-items:center; justify-content:center; }
+
+body.page-formulier .container{ width:100%; max-width:var(--max-width); background:var(--bg); border-radius:var(--radius); box-shadow:0 6px 20px rgba(17,24,39,0.08); padding:20px; margin:12px; }
+
+body.page-formulier header{ display:flex; align-items:flex-start; gap:12px; margin-bottom:18px; }
+body.page-formulier .brand{ display:flex; flex-direction:column; }
+body.page-formulier h1{ margin:0 0 6px 0; font-size:1.125rem; }
+body.page-formulier p.lead{ margin:0; color:var(--muted); font-size:0.95rem; }
+
+body.page-formulier form{ display:block; width:100%; background:transparent; }
+body.page-formulier .grid{ display:grid; gap:12px; }
+@media(min-width:720px){ body.page-formulier .two-col{ grid-template-columns:1fr 1fr; gap:12px } body.page-formulier .three-col{ grid-template-columns:1fr 1fr 1fr; gap:12px } }
+
+body.page-formulier label{ display:block; font-weight:600; margin-bottom:6px; font-size:0.92rem; }
+body.page-formulier input[type="text"], body.page-formulier input[type="email"], body.page-formulier select, body.page-formulier textarea, body.page-formulier .file-input{ width:100%; padding:12px 14px; border-radius:8px; border:1px solid #e6e9ee; background:var(--panel); font-size:0.95rem; color:#111827; }
+body.page-formulier textarea{ min-height:110px; resize:vertical }
+body.page-formulier .hint{ font-size:0.85rem; color:var(--muted); margin-top:6px }
+body.page-formulier .field{ margin-bottom:14px; }
+body.page-formulier .inline{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+body.page-formulier .checkbox-group label{ font-weight:500; display:flex; gap:8px; align-items:center; padding:8px 10px; border-radius:8px; background:#f8fafb; border:1px solid #eef2f6; cursor:pointer; font-size:0.95rem; }
+body.page-formulier .errors{ color:var(--danger); font-size:0.88rem; margin-top:6px; display:none }
+body.page-formulier .errors.active{ display:block }
+body.page-formulier .actions{ display:flex; gap:12px; align-items:center; margin-top:10px; }
+body.page-formulier .btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:600; font-size:0.95rem; }
+body.page-formulier .btn-primary{ background:var(--accent); color:#fff; box-shadow:0 4px 10px rgba(11,108,255,0.14); }
+body.page-formulier .btn[disabled]{ opacity:0.6; cursor:default }
+body.page-formulier .success{ padding:10px 14px; border-radius:8px; background:#ecfdf5; border:1px solid #bdeacf; color:#065f46; font-weight:600; }
+body.page-formulier .spinner{ width:16px;height:16px;border:2px solid rgba(255,255,255,0.35); border-top-color:rgba(255,255,255,0.95); border-radius:50%; animation:spin 1s linear infinite; }
+@keyframes spin{ to{ transform:rotate(360deg) } }
+body.page-formulier footer{ margin-top:18px; font-size:0.82rem; color:var(--muted); }
+body.page-formulier .conditional{ display:none } body.page-formulier .conditional.active{ display:block }
+body.page-formulier .form-top{ position:sticky; top:0; background:var(--bg); padding:10px 0 8px; z-index:6; border-bottom:1px solid #f3f6f9 }
+
+
+/* ===== Override: make offerte header match main site header ===== */
+/* Keep the offerte page visual styles, but use the site's header layout */
+body.page-offerte .site-header {
+  border-bottom: 1px solid #1f1f1f;
+  background-color: rgba(11,11,12,0.85);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+body.page-offerte .site-header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* ensure logo sizing and nav spacing match the main site */
+body.page-offerte .site-header .logo { height: 34px; }
+body.page-offerte .site-header .main-nav a { margin-left: 24px; font-weight: 600; color: var(--gray); }
+body.page-offerte .site-header .main-nav a:hover { color: var(--white); }
+body.page-offerte .site-header .nav-cta { color: var(--red); }
+
+/* undo the centered header override applied earlier */
+body.page-offerte header { text-align: left; padding: 0; }
+
